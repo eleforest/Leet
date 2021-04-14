@@ -9,7 +9,6 @@ public class FindMinimumInRotatedSortedArray {
 		int l = 0;
 		int r = a.length - 1;
 		int n = a.length;
-		r = n - 1;
 		while (l < r) {
 			int m = l + (r - l) / 2;
 			if (a[m] < a[n - 1]) { // left a[m] < a[r]
@@ -22,14 +21,5 @@ public class FindMinimumInRotatedSortedArray {
 			}
 		}
 		return a[l];
-	}
-
-	/*
-	Kth elements
-	 */
-	private static int findKthElements(int [] a){
-		return 0;
-	}
-	public static void main(String args[]){
 	}
 }

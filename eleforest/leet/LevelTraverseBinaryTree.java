@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class LevelTraverseBinaryTree {
-
+    /*
+    给定一棵二叉树，层次遍历之
+     */
     public static List<TreeNode> levelTraverse(TreeNode root){
         List<TreeNode> levelResult = new ArrayList<>();
         if (root == null) {
