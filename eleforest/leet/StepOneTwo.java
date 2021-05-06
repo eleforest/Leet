@@ -17,7 +17,7 @@ public class StepOneTwo {
     public static int maxPoints(int [] locations, int n){
         int [] dp = new int[locations.length];
         dp[0] = locations[0];
-        dp[1] = locations[0] + locations[1]/2;
+        dp[1] = dp[0] + locations[1]/2;
         for (int i = 2; i < dp.length; i ++){
             dp[i] = Math.max(dp[i-1] + locations[i]/2, dp[i-2] + locations[i]);
         }

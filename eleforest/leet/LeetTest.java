@@ -11,6 +11,7 @@ import static eleforest.leet.BitReverseTimes.bitReverseTimesCalc;
 import static eleforest.leet.MaxProfit.maxProfit;
 import static eleforest.leet.QueueGetFood.calcTime2Food;
 import static eleforest.leet.StepOneTwo.stepOneTwo;
+import static eleforest.leet.SymmetryBinaryTree.*;
 
 class LeetTest {
     @Test
@@ -65,5 +66,30 @@ class LeetTest {
         Assertions.assertEquals(0, maxProfit(seq));
         seq = new int[] {1,2,3,2,5,1,7};
         Assertions.assertEquals(11, maxProfit(seq));
+        seq = new int[] {1};
+        Assertions.assertEquals(0, maxProfit(seq));
+
+    }
+
+    @Test
+    void testSymmetryTree(){
+        int[] preOrd = new int[]{0, 1, 2, 3};
+        int[] inOrd = new int[]{2, 1, 3, 0};
+        int[] weight = new int[]{1, 2, 4, 4};
+        Assertions.assertEquals(10, maxWeight(preOrd,inOrd,weight));
+        preOrd = new int[]{0, 1, 2, 3, 4, 5, 6};
+        inOrd = new int[]{2, 1, 3, 0, 5, 4, 6};
+        weight = new int[]{1, 2, 4, 4, 2, 4, 4};
+        Assertions.assertEquals(21, maxWeight(preOrd,inOrd,weight));
+        preOrd = new int[]{0, 1, 2};
+        inOrd = new int[]{2, 1, 0};
+        weight = new int[]{1, 2, 8};
+        Assertions.assertEquals(8, maxWeight(preOrd,inOrd,weight));
+        // error
+        preOrd = new int[]{0, 1, 2};
+        inOrd = new int[]{3, 2, 3};
+        weight = new int[]{1, 2, 8};
+        Assertions.assertEquals(0, maxWeight(preOrd,inOrd,weight));
+
     }
 }
