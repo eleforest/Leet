@@ -12,6 +12,7 @@ import static eleforest.leet.MaxProfit.maxProfit;
 import static eleforest.leet.QueueGetFood.calcTime2Food;
 import static eleforest.leet.StepOneTwo.stepOneTwo;
 import static eleforest.leet.SymmetryBinaryTree.*;
+import static eleforest.leet.MinArrayDifferenceSum.minDifference;
 
 class LeetTest {
     @Test
@@ -91,5 +92,10 @@ class LeetTest {
         weight = new int[]{1, 2, 8};
         Assertions.assertEquals(0, maxWeight(preOrd,inOrd,weight));
 
+    }
+    @Test
+    void testMinArrayDifferenceSum(){
+        Assertions.assertEquals(4, minDifference(3));
+        Assertions.assertEquals(6, minDifference(5));
     }
 }

@@ -34,6 +34,9 @@ public class SymmetryBinaryTree {
     preOrd/inOrd: 以节点编号存的前序和中序遍历序列
      */
     public static TreeNode constructTree(int [] preOrd, int [] inOrd, int [] weights){
+        if ( preOrd == null || inOrd == null || weights == null){
+            return null;
+        }
         if (preOrd.length != inOrd.length || preOrd.length == 0){ // error
             return null;
         }
