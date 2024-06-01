@@ -41,6 +41,7 @@ public class StepOneTwo {
             System.out.println(point);
             sb.append(point).append(" ");
         }
+        scanner.close();
         return sb.toString();
     }
 }

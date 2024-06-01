@@ -56,7 +56,8 @@ public class QueueGetFood {
             curr ++;
             count ++;
         }
-        System.out.println(sb);
+        // System.out.println(sb);
+        scanner.close();
         return sb.toString();
     }
 }

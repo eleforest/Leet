@@ -1,34 +1,10 @@
 package eleforest.leet;
-/*
-二叉树每个节点都有value，如果一棵二叉树的左右子树交换后，树结构和各个节点对应的value都相等，则称这棵树为对称二叉树
-例如下面这棵二叉树是一棵对称二叉树
-      1
-    5   5
-   2 3 3 2
-而以下这两棵树就不是对称二叉树。
-      1             1
-    5   5         5   5
-   3     2      3    3
-现给定一棵二叉树的前序和中序序列，以及此树每个节点的value，请找到这棵树中权值最大的对称子树并输出其权值。注意，一个节点的树也是子树。
-输入为：
-4 //四个节点
-1 2 4 4 //1到4号节点每个节点的权值
-0 1 2 3 //前序遍历序列
-2 1 3 0 //中序遍历序列
-
-输出：10
-    1
-   2
-  4 4
- 其中以2号节点为根的子树为对称子树，其权重和为10
- */
 
 import java.util.Arrays;
 
 import static java.lang.Math.max;
 
 public class SymmetryBinaryTree {
-    private static Integer maxSumWeight = 0;
     /*
     weights：下标位置保存对应编号节点的权重，一棵树完整的权重
     preOrd/inOrd: 以节点编号存的前序和中序遍历序列
