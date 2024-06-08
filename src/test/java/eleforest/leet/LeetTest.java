@@ -28,6 +28,8 @@ class LeetTest {
         levelList.forEach(a -> System.out.println(a.val));
     }
 
+
+
     @Test
     void testReverseBit(){
         Assertions.assertEquals(0, bitReverseTimesCalc(13,3,15));
