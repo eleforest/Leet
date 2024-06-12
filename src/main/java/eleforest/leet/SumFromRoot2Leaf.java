@@ -29,6 +29,8 @@ public class SumFromRoot2Leaf {
     }
 
     public static int sumTraverse(TreeNode root, int prev){
+        if (root == null || prev < 0 || prev > 9)// illegal
+            return -1;
         int curr = prev * 10 + root.val;
         int leftSum = 0, rightSum = 0;
         if (root.left == null && root.right == null){

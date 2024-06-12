@@ -21,4 +21,10 @@ public class SumFromRoot2LeafTest {
         Assertions.assertEquals(25, 
             SumFromRoot2Leaf.sumTraverse(root, 0));
     }
+
+    @Test
+    void testSumTraverse3() {
+        Assertions.assertEquals(-1, 
+            SumFromRoot2Leaf.sumTraverse(null, 0));
+    }
 }
