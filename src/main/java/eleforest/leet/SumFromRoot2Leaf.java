@@ -14,19 +14,6 @@ package eleforest.leet;
  */
 
 public class SumFromRoot2Leaf {
-    public static void genTree(int [] treeSeq, int idx, TreeNode root){// 完全二叉树的序列
-        int lIdx = 2 * idx + 1;
-        int rIdx = lIdx + 1;
-        if (lIdx < treeSeq.length){
-            root.left = new TreeNode(treeSeq[lIdx]);
-            genTree(treeSeq, lIdx, root.left);
-        }
-        if (rIdx < treeSeq.length){
-            root.right = new TreeNode(treeSeq[rIdx]);
-            genTree(treeSeq, rIdx, root.right);
-        }
-        return;
-    }
 
     public static int sumTraverse(TreeNode root, int prev){
         if (root == null || prev < 0 || prev > 9)// illegal
